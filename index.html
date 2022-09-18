@@ -1,0 +1,111 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="width=device-width,initial-scale=1"/>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	</head>
+	<body>	
+	<div class="hero">
+		
+		<!--Nav bar code-->
+		<nav id="navBar">
+			<div id="icon_div"><i class="fa fa-ravelry" aria-hidden="true" id="icon"></i><span id="RA">RA</span><span id="mylogo">R</span>
+			</div>
+			<!--Manu bar code-->
+			<div id="manu">
+				<ul>
+					<li>HOME</li>
+					<li>ABOUT</li>
+					<li>RECIPE</li>
+				</ul>
+			</div>
+			<!--Manu bar code end-->
+			
+			<!--button code-->
+			<button id="button" title="Click for sign up"">SIGN UP</button>
+			<!--button code end-->
+		</nav>
+		
+		<!--baner code-->
+		<div id="benner">
+			<h1>Food <span id="baner_span">doesn't have<br/>a religion.</span> It is a religion</h1>
+			<button id="button_2">EXPLORE</button>
+		</div>
+		<!--baner code end-->
+		
+		<!--vertical-bar code-->
+		<i class="fa fa-bars" id="show_vertical"></i>
+		<div id="vertical-bar">
+			<div id="search-icon">
+				<i class="fa fa-close" id="close_vertical"></i>
+				<i class="fa fa-search"></i>
+			</div>
+			<div id="social-icon">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-pinterest"></i>
+			</div>
+		</div>
+		<!--vertical-bar code end-->
+		
+		<!--signup-slide code-->
+		<div id="signup_slide">
+			<i class="fa fa-close" id="close_slide"></i>
+			
+			<h2><i class="fa fa-user-o"></i>SIGN UP</h2>
+			<div id="underline"></div>
+			<h3  id="email" ><i class="fa fa-user"></i> Email Address</h3>
+			<input id="input" type="text"/>
+			<h3 id="password"><i class="fa fa-lock"></i>Password</h3>
+			<input id="input_2" type="password"/>
+			<button id="login">LOG IN</button>
+		</div>
+		<!--signup-slide code end-->
+	
+		
+	</div>
+
+	<script type="text/javascript" >
+		document.querySelector("#button").addEventListener("click",show);
+		function show(){
+		document.getElementById("signup_slide").setAttribute("style","opacity:1;transform:scaleX(1)");
+		};
+		
+		document.querySelector("#close_slide").addEventListener("click",close);
+		function close(){
+		document.getElementById("signup_slide").setAttribute("style","opacity:0;transform:scaleX(0)");
+		}
+		
+		document.querySelector("#show_vertical").addEventListener("click",verticalShow);
+		function verticalShow(){
+		document.getElementById("vertical-bar").setAttribute("style","opacity:1;transform:scaleX(1)");
+		}
+	
+		document.querySelector("#close_vertical").addEventListener("click",verticalClose);
+		function verticalClose(){
+		document.getElementById("vertical-bar").setAttribute("style","opacity:0;transform:scaleX(0)");
+		}
+	
+			<!-- new page open -->
+				
+				document.querySelector(".page").addEventListener("click",function(){ 
+					if(document.querySelector(".page").classList.contains("page_hover")){
+						document.querySelector(".page").classList.remove("page_hover");
+						document.querySelector(".page").classList.add("page_hover_2");
+						document.querySelector(".AN_page").setAttribute("style","transform:scaleX(1)");
+						
+						
+					}else if(document.querySelector(".page").classList.contains("page_hover_2")){
+						document.querySelector(".page").classList.remove("page_hover_2");
+						document.querySelector(".page").classList.add("page_hover");
+						document.querySelector(".AN_page").setAttribute("style","transform:scaleX(0)");
+					}
+				});
+				
+				<!-- new page end -->
+	
+	</script>
+	</body>
+</html>
